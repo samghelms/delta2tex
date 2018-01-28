@@ -1,0 +1,20 @@
+{
+  "name": "quill2tex",
+  "version": "1.0.0",
+  "description": "converts deltas to tex",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src/ -d dist/",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "babel-node src/index.js"
+  },
+  "author": "Samuel Helms",
+  "license": "MIT",
+  "devDependencies": {
+    "babel": "^6.23.0",
+    "babel-cli": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "nodemon": "^1.14.11"
+  }
+}
