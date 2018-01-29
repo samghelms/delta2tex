@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    <script src="build/delta2tex.min.js"></script>
+   
+    <title>quill2tex tests</title>
+  </head>
+  <body>
+    <div class="standalone-container">
+      <div id="snow-container"></div>
+    </div>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+
+    <script type="text/javascript">
+    	const delta = {"ops":[{"insert":"class Test: "},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"  // takes in 100 and mods it"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"  100 % 6"},{"attributes":{"code-block":true},"insert":"\n"},{"insert":"\n"},{"insert":{"formula":"100^6 = 6"}},{"insert":" "},{"attributes":{"header":1},"insert":"\n"},{"insert":"\nThis is the motto for my life\n\n"},{"insert":{"formula":"e = mc^2"}},{"insert":" \n\n\n\n\n\n"}]}
+
+		console.log(delta2tex.parse(delta))
+
+    </script>
+    
+  </body>
+</html>

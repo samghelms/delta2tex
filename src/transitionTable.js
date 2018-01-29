@@ -16,7 +16,6 @@ const concatObj = {
 		block: (atomNext, atomTop) => {
 			const nxtFmtr = atomNext.formatters? atomNext.formatters: new Formatter()
 			const topFmtr = atomTop.formatters? atomTop.formatters: new Formatter()
-			// const fmtr = nxtFmtr.diff(topFmtr)
 			// topFmtr needs to know if it is inside of something already, and nxtFmtr needs to know whether to end blocks or not
 			// if inside of something, don't place a new start (remove the formatter)
 			const startFmtr = topFmtr.subtract(nxtFmtr)
@@ -27,7 +26,7 @@ const concatObj = {
 			const sep = getSpaceFormatting(blockLabels)(atomNext.newlineCt)
 
 			const text = endFmtr.formatBlock(atomNext.text, "end")+sep+startFmtr.formatBlock(atomTop.text, "start")
-			// get remaining formatters
+
 			return ["block", {text:text, formatters: topFmtr, newlineCt: atomTop.newlineCt}]
 		},
 	},

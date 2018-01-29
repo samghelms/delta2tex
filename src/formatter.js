@@ -53,7 +53,9 @@ export class Formatter {
 }
 
 const codeBlockFormatter = (text, args, pos) => {
+	console.log("code block")
 	if(pos === "start") {
+		console.log("start called")
 		return "\\begin{lstlisting}\n"+text
 	} else {
 		return text+" \n\\end{lstlisting}"
@@ -109,7 +111,7 @@ const newlineFormatters = {
 	/*
 	Define special rules for spacing within blocks here
 	*/
-	'_default-space-provider': (newlineNumber)=> "\n\\vspace{"+newlineNumber+"}\n",
+	'_default-space-provider': (newlineNumber)=> "\n\\vspace{"+newlineNumber+"mm}\n",
 	'code-block': (newlineNumber)=> Array.from({length: newlineNumber}, (x,i) => "\n").join("")
 
 }

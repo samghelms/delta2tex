@@ -32,16 +32,13 @@ const apply_t = (state, transition) => {
 }
 
 const parser = (delta) => {
-	let state = {q:[], delta: delta, finalFlag: false}
+	// TODO: find a more elegent way of dealing with the root
+	let state = {q:[["block", { text: '', newlineCt: 0 }]], delta: delta, finalFlag: false}
 	let transition 
 	let i = 0
 	while(!state.finalFlag) {		
 		transition = oracle(state)
 		state = apply_t(state, transition)
-		// i+=1
-		// if (i===10) {
-		// 	break
-		// }
 	}
 
 	return state["q"]

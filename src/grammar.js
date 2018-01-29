@@ -9,10 +9,6 @@ const grammarObj = {
 		attributes_inline: actions.COMBINE,
 		endfile: actions.END,
 	},
-	// line: {
-	// 	block: "block",
-	// 	line: "block"
-	// },
 	insert: {
 		insert: actions.COMBINE,
 		attributes_block: actions.COMBINE,
@@ -24,10 +20,6 @@ const grammarObj = {
 		insert: actions.COMBINE,
 		attributes_inline: actions.COMBINE
 	},
-	// attributes_block: {
-	// 	newline: "endline",
-	// 	eof: "endline"
-	// }
 
 }
 
